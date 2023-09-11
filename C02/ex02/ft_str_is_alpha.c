@@ -15,7 +15,7 @@ int	ft_str_is_alpha(char *str)
 	int	i;
 
 	i = 0;
-	if (str[i] == '\0' )
+	if (str[i] == '\0')
 	{
 		return (1);
 	}
@@ -26,15 +26,6 @@ int	ft_str_is_alpha(char *str)
 			i++;
 		else
 			return (0);
-	}	
+	}
 	return (1);
 }
-
-int main()
-{
-    char str[] ="adsdakdalks";
-    ft_str_is_alpha(str);
-      
-}
-
-

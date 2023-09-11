@@ -6,7 +6,7 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 18:01:55 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/11 18:32:45 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/11 20:44:27 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 		i++;
-	return(i);
+	return (i);
 }
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)

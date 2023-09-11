@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 char	*ft_strlowcase(char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -39,7 +38,7 @@ char	*ft_strcapitalize(char *str)
 		{
 			if (checkpoint == 1)
 				str[i] -= 32;
-			    checkpoint = 0;
+			checkpoint = 0;
 		}
 		else if (str[i] >= '0' && str[i] <= '9')
 			checkpoint = 0;
@@ -48,12 +47,4 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int	main()
-{
-	char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
- 
-	printf("%s", ft_strcapitalize(str));
-
 }

@@ -22,13 +22,4 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-     
 }
-
- int main()
- {
-     char str[] = "alperenn";
-     char str2[] = "tokay"; 
- 	printf("%s\n",  ft_strcpy(str, str2));
-     return(0);
- }
