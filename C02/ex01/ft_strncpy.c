@@ -6,11 +6,9 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 16:16:01 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/11 17:14:36 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/12 17:45:59 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
