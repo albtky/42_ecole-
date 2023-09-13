@@ -6,7 +6,7 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:03:46 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/13 13:27:36 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/13 14:08:48 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ void	ft_putnbr_base(int nbr, char *base)
 #include <stdio.h>
 int		main(void)
 {
-	ft_putnbr_base(-12, "01");
+	//ft_putnbr_base(-12, "01");
 	printf("\n");
-	//ft_putnbr_base(40, "poneyvif");
+	ft_putnbr_base(40, "poneyvif");
 	printf("\n");
 	//ft_putnbr_base(894867, "0123456789");
 	printf("\n");
