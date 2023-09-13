@@ -6,14 +6,14 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 22:40:04 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/12 23:45:00 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/13 05:34:39 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
