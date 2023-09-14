@@ -38,3 +38,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (x);
 }
+#include <stdio.h>
+int main()
+
+{
+	char d[] ="alperen";
+	char s[]= "ömerbey";
+	ft_strlcpy(d,s,2);
+	printf("%s",s);
+	printf("\n");
+	return (0);
+}

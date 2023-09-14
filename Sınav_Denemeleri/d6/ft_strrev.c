@@ -31,5 +31,6 @@ int main()
 {
 	char s[] = "alperen";
 	printf("%s", ft_strrev(s));
+	printf ("\n");
 	return (0);
 }
