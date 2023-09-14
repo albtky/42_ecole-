@@ -6,49 +6,31 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:03:43 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/13 12:04:36 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/14 09:33:18 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-int	whitespaces(char *str, int *ptr_i)
-{
-	int	count;
-	int	i;
-
-	i = 0;
-	count = 1;
-	while ((str[i] >= 9 && str[i] <= 13 ) || str[i] == 32)
-		i++;
-	while ((str[i] == 43 || str[i] == 45))
-	{
-		if (str[i] == 45)
-			count *= -1;
-		i++;
-	}
-	*ptr_i = i;
-	return (count);
-}
-
 int	ft_atoi(char *str)
 {
-	int	sign;
-	int	result;
 	int	i;
+	int	negative;
+	int	number;
 
-	result = 0;
-	sign = whitespaces(str, &i);
-	while (str[i] && str[i] >= 48 && str[i] <= 57)
+	i = 0;
+	negative = 0;
+	number = 0;
+	while ((str[i] != '\0') && (str[i] < 48 || str[i] > 57))
 	{
-		result *= 10;
-		result += str[i] - 48;
+		if (str[i] == '-')
+			negative++;
 		i++;
 	}
-	result *= sign;
-	return (result);
-}
-int main(void)
-{
-	char *s = "   ---+--+01234506789ab567";
-	printf("%d", ft_atoi(s));
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		number = number * 10 + str[i] - 48;
+		i++;
+	}
+	if (negative % 2 == 1)
+		return (number * -1);
+	return (number);
 }

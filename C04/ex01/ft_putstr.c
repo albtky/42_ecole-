@@ -6,11 +6,12 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:03:38 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/13 12:11:37 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/14 09:33:50 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -22,9 +23,3 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-
- int main()
- {
- 	ft_putstr("Hello World!");
- }
- 

@@ -6,12 +6,12 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:03:41 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/13 12:04:27 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/14 09:33:45 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -37,9 +37,5 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb % 10);
 	}
 	else
-		 ft_putchar(nb + 48);
-}
-int main (void)
-{
-	ft_putnbr(4563);
+		ft_putchar(nb + 48);
 }

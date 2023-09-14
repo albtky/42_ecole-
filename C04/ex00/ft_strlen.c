@@ -6,11 +6,10 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:03:32 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/13 12:11:27 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/14 09:33:53 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -21,9 +20,4 @@ int	ft_strlen(char *str)
 		i++;
 	}
 	return (i);
-}
-
-int main (void)
-{
-	printf("%i", ft_strlen("854dsjfksdlk"));
 }
