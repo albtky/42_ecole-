@@ -6,7 +6,7 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 23:12:33 by atokay            #+#    #+#             */
-/*   Updated: 2023/09/16 23:12:34 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/17 01:59:13 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,9 @@ int	ft_is_prime(int nb)
 
 int main (void)
 {
-	printf("%d -> %d\n", -3965, ft_is_prime(-3965));
-	printf("%d -> %d\n", -12, ft_is_prime(-12));
-	printf("%d -> %d\n", 0, ft_is_prime(0));
-	printf("%d -> %d\n", 1, ft_is_prime(1));
-	printf("%d -> %d\n", 2, ft_is_prime(2));
-	printf("%d -> %d\n", 4219, ft_is_prime(4219));
-	printf("%d -> %d\n", 7853, ft_is_prime(7853));
-	printf("%d -> %d\n", 78989, ft_is_prime(78989));
-	printf("%d -> %d\n", 2147483647, ft_is_prime(2147483647));
-	printf("%d -> %d\n", 200, ft_is_prime(200));
+
+	printf("%d -> %d\n", 2, ft_is_prime(3));
+/*
 	printf("%d -> %d\n", 201, ft_is_prime(201));
 	printf("%d -> %d\n", 202, ft_is_prime(202));
 	printf("%d -> %d\n", 203, ft_is_prime(203));
@@ -1944,4 +1937,5 @@ int main (void)
 	printf("%d -> %d\n", 347127, ft_is_prime(347127));
 	printf("%d -> %d\n", 72191, ft_is_prime(72191));
 	return (0);
+*/
 }
