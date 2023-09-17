@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int	nb)
+int	ft_iterative_factorial(int nb)
 {
 	unsigned int	result;
 
 	result = 1;
 	while (nb > 0)
 	{
-		 result *= nb;
+		result *= nb;
 		nb--;
 	}
 	if (nb < 0)

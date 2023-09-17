@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int	nb)
+int	ft_recursive_factorial(int nb)
 {
 	int	result;
 
@@ -23,9 +23,4 @@ int	ft_recursive_factorial(int	nb)
 	if (nb < 0)
 		return (0);
 	return (result);
-}
-
-int	main(void)
-{
-	printf("%i", ft_recursive_factorial(9));
 }
