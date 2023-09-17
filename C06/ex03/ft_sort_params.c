@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+
 void	ft_putchar(char c)
 {
 	write (1, &c, 1);
@@ -51,8 +52,9 @@ void	ft_swap(char **a, char **b)
 
 int	main(int argc, char **argv)
 {
-	int		j;
-	int		x;
+	int	j;
+	int	x;
+
 	x = 1;
 	while (x < argc - 1)
 	{

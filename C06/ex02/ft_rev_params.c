@@ -14,24 +14,25 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
 int	main(int argc, char *argv[])
 {
-int i=argc-1; 
-int y; 
+	int	i;
+	int	y;
 
-	while(i > 0)
+	i = argc - 1;
+	while (i > 0)
 	{
-		y=0;
-		while(argv[i][y])
+		y = 0;
+		while (argv[i][y])
 		{
 			ft_putchar(argv[i][y]);
 			y++;
 		}
 		i--;
-		ft_putchar ('\n');
+		ft_putchar('\n');
 	}
 	return (0);
 }
