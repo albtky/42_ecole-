@@ -29,7 +29,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	i = 0;
 	if (size != 0)
 	{
-		while (src [i] != '\0' && i < size - 1)
+		while (src [i] != '\0' && i <= size - 1)
 		{
 			dest[i] = src[i];
 			i++;
@@ -42,10 +42,10 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 int main()
 
 {
-	char d[] ="alperen";
+	char d[] ="alperenıı";
 	char s[]= "ömerbey";
-	ft_strlcpy(d,s,2);
-	printf("%s",s);
+	ft_strlcpy(d,s,7);
+	printf("%s",d);
 	printf("\n");
 	return (0);
 }
