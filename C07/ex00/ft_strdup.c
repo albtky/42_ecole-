@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eulutas <eulutas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 03:37:23 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/18 21:34:36 by eulutas          ###   ########.fr       */
+/*   Updated: 2023/09/19 15:12:33 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ char	*ft_strdup(char *src)
 		dest[i] = '\0';
 		return (dest);
 	}
+}
+#include <stdio.h>
+
+int main()
+{
+	char s[] ="alperen";
+	ft_strdup(s);
+	
 }

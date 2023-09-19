@@ -1,36 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 15:09:47 by atokay           ###   ########.fr       */
+/*   Created: 2023/08/31 14:12:25 by atokay            #+#    #+#             */
+/*   Updated: 2023/09/06 16:18:50 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+void	ft_putchar(char c)
 {
-	int	*tab;
-	int	i;
-
-	if (min >= max)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	if (tab == NULL)
-		return (NULL);
-	else
-	{
-		i = 0;
-		while (i < max - min)
-		{
-			tab[i] = min + i;
-			i++;
-		}
-		return (tab);
-	}
+	write(1, &c, 1);
 }
-
-int main()
-

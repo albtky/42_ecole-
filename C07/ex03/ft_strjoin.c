@@ -6,10 +6,11 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:13:33 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 13:58:36 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/19 15:16:01 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -76,4 +77,13 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		}
 	}
 	return (res);
+}
+#include <stdio.h>
+int main()
+{
+	char *sep= "-";
+	char *str[] = {"alperen","tokay","erdem"};
+	int size = 3;
+	printf("%s\n",ft_strjoin(3,str,sep));
+	return(0);
 }

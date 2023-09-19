@@ -1,36 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 15:09:47 by atokay           ###   ########.fr       */
+/*   Created: 2023/09/05 15:57:10 by atokay            #+#    #+#             */
+/*   Updated: 2023/09/06 16:18:45 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+void	ft_putchar(int a)
 {
-	int	*tab;
-	int	i;
-
-	if (min >= max)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	if (tab == NULL)
-		return (NULL);
-	else
-	{
-		i = 0;
-		while (i < max - min)
-		{
-			tab[i] = min + i;
-			i++;
-		}
-		return (tab);
-	}
+	write(1, &a, 1);
 }
 
-int main()
+void	ft_print_comb(void)
+{
+	int	a;
+	int	b;
+	int	c;
 
+	a = 0;
+	while (a <= 7)
+	{
+		b = a + 1;
+		while (b <= 8)
+		{
+			c = b + 1;
+			while (c <= 9)
+			{
+				ft_putchar(a + 48);
+				ft_putchar(b + 48);
+				ft_putchar(c + 48);
+				if (a != 7)
+					write(1, ", ", 2);
+				c++;
+			}
+			b++;
+		}
+		a++;
+	}
+}

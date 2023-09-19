@@ -6,9 +6,10 @@
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 03:58:48 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 13:25:46 by atokay           ###   ########.fr       */
+/*   Updated: 2023/09/19 15:15:49 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
@@ -34,3 +35,6 @@ int	ft_ultimate_range(int **range, int min, int max)
 	*range = arr;
 	return (size_arr);
 }
+
+
+

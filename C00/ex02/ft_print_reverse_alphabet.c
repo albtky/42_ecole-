@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 15:09:47 by atokay           ###   ########.fr       */
+/*   Created: 2023/09/03 20:29:39 by atokay            #+#    #+#             */
+/*   Updated: 2023/09/06 16:18:48 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+void	ft_print_reverse_alphabet(void)
 {
-	int	*tab;
-	int	i;
+	int	z; 
 
-	if (min >= max)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	if (tab == NULL)
-		return (NULL);
-	else
+	z = 122;
+	while (z >= 97)
 	{
-		i = 0;
-		while (i < max - min)
-		{
-			tab[i] = min + i;
-			i++;
-		}
-		return (tab);
+		write(1, &z, 1);
+		z--;
 	}
 }
-
-int main()
-

@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 15:09:47 by atokay           ###   ########.fr       */
+/*   Created: 2023/09/04 13:12:30 by atokay            #+#    #+#             */
+/*   Updated: 2023/09/06 16:18:46 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+void	ft_is_negative(int n)
 {
-	int	*tab;
-	int	i;
-
-	if (min >= max)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	if (tab == NULL)
-		return (NULL);
-	else
+	if (n < 0)
 	{
-		i = 0;
-		while (i < max - min)
-		{
-			tab[i] = min + i;
-			i++;
-		}
-		return (tab);
+		write(1, "N", 1);
+	}
+	else 
+	{
+		write(1, "P", 1);
 	}
 }
-
-int main()
-

@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 15:09:47 by atokay           ###   ########.fr       */
+/*   Created: 2023/09/04 18:16:02 by atokay            #+#    #+#             */
+/*   Updated: 2023/09/06 16:18:38 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+void	ft_putchar(char c)
 {
-	int	*tab;
-	int	i;
-
-	if (min >= max)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	if (tab == NULL)
-		return (NULL);
-	else
-	{
-		i = 0;
-		while (i < max - min)
-		{
-			tab[i] = min + i;
-			i++;
-		}
-		return (tab);
-	}
+	write(1, &c, 1);
 }
 
-int main()
+void	ft_putnbr(int nb)
+{
+	int	n;
 
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		n = -nb;
+	}
+	else
+		n = nb;
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		n %= 10;
+	}
+	ft_putchar(n + '0');
+}

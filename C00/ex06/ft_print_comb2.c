@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
-/*   Updated: 2023/09/19 15:09:47 by atokay           ###   ########.fr       */
+/*   Created: 2023/09/04 17:56:56 by atokay            #+#    #+#             */
+/*   Updated: 2023/09/06 16:18:42 by atokay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+void	ft_print_digit(int n)
 {
-	int	*tab;
-	int	i;
-
-	if (min >= max)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	if (tab == NULL)
-		return (NULL);
-	else
-	{
-		i = 0;
-		while (i < max - min)
-		{
-			tab[i] = min + i;
-			i++;
-		}
-		return (tab);
-	}
+	n += 48;
+	write(1, &n, 1);
 }
 
-int main()
+void	ft_print_comb2(void)
+{
+	int	a;
+	int	b;
 
+	a = 0;
+	while (a <= 98)
+	{
+		b = a + 1;
+		while (b <= 99)
+		{
+			ft_print_digit(a / 10);
+			ft_print_digit(a % 10);
+			write(1, " ", 1);
+			ft_print_digit(b / 10);
+			ft_print_digit(b % 10);
+			if (a != 98 || b != 99)
+				write(1, ", ", 2);
+			b++;
+		}
+		a++;
+	}
+}
