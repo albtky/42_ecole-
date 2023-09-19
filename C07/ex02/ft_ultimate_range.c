@@ -1,50 +1,36 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/17 03:58:48 by eulutas           #+#    #+#             */
+/*   Updated: 2023/09/19 13:25:46 by atokay           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int		bound;
-	int		index;
-	int		*buffer;
-	int		*d;
+	int	i;
+	int	*arr;
+	int	size_arr;
 
 	if (min >= max)
 	{
-		*range = 0;
+		*range = NULL;
 		return (0);
 	}
-	bound = max - min;
-	d = (buffer = malloc(bound * sizeof(int)));
-	if (!d)
-	{
-		*range = 0;
+	size_arr = max - min;
+	arr = (int *)malloc(size_arr * sizeof(int));
+	if (!arr)
 		return (-1);
-	}
-	*range = buffer;
-	index = 0;
-	while (index < bound)
+	i = 0;
+	while (i < size_arr)
 	{
-		buffer[index] = min + index;
-		index++;
-	}
-	return (bound);
-}
-
-int		main(void)
-{
-	int	min;
-	int	max;
-	int	*tab;
-	int	size;
-	int	i = 0;
-
-	min = 5;
-	max = 10;
-	size = ft_ultimate_range(&tab, min, max);
-	while(i < size)
-	{
-		printf("%d, ", tab[i]);
+		arr[i] = min + i;
 		i++;
 	}
-
+	*range = arr;
+	return (size_arr);
 }

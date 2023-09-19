@@ -1,43 +1,33 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atokay <atokay@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/17 03:42:49 by eulutas           #+#    #+#             */
+/*   Updated: 2023/09/19 13:51:49 by atokay           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	*ft_range(int min, int max)
 {
-	int		range;
-	int		index;
-	int		*buffer;
-	int		*d;
+	int	*tab;
+	int	i;
 
 	if (min >= max)
-		return (0);
-	range = max - min;
-	d = (buffer = malloc(range * sizeof(int)));
-	if (!d)
-		return (0);
-	index = 0;
-	while (index < range)
+		return (NULL);
+	tab = (int *)malloc(sizeof(int) * (max - min));
+	if (tab == NULL)
+		return (NULL);
+	else
 	{
-		buffer[index] = min + index;
-		index++;
+		i = 0;
+		while (i < max - min)
+		{
+			tab[i] = min + i;
+			i++;
+		}
+		return (tab);
 	}
-	return (buffer);
-}
-int		main(void)
-{
-	int	min;
-	int	max;
-	int	*tab;
-	int	i = 0;
-	int	size;
-
-	min = 5;
-	max = 10;
-	size = max - min;
-	tab = ft_range(min, max);
-	while(i < size)
-	{
-		printf("%d, ", tab[i]);
-		i++;
-	}
-
 }
