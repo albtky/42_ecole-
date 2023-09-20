@@ -4,18 +4,18 @@
 int *range(int start, int end)
 {
     int size = end - start;
-    int *ret = (int *)malloc(sizeof(int) * size);
+    int *ret = (int *)malloc(sizeof(int) * (size + 1));
     int i = 0;
-    while (i <= size + 1)
+    while (i < size + 1)
     {
-        if (start != end + 1)
+        if (start <= end)
         {
             ret[i] = start;
             start++;
-            i++;
         }
+        i++;
     }
-    ret[i] = '\0';
+
     return (ret);
 }
 int main()
@@ -24,9 +24,11 @@ int main()
     int b = 10;
     int *tab = range(a, b);
     int k = 0;
-    while (tab[k])
+    while (tab[k] != '\0')
     {
-        printf("%i", tab[k]);
+        printf("%d\n", tab[k]);
         k++;
     }
+    printf("\n");
+    return (0);
 }
