@@ -26,3 +26,10 @@ void	ft_ultimate_div_mod(int *a, int *b)
 		*b = mod_tmp;
 	}
 }
+
+int main()
+{
+	int a = 10;
+	int b = 20;
+	
+}

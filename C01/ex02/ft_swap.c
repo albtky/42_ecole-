@@ -13,14 +13,27 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b)
+void ft_swap(int **a, int **b)
 {
-	int		c;
+	int c;
 
 	if (b != 0)
 	{
-		c = *a;
-		*a = *b;
-		*b = c;
+		c = **a;
+		**a = **b;
+		**b = c;
 	}
+}
+
+int main()
+{
+	int *x;
+	int *y;
+	int X = 3;
+	int Y = 4;
+	x = &X;
+	y = &Y;
+	ft_swap(&x, &y);
+	printf("%d---%d", *x, *y);
+	return (0);
 }

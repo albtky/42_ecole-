@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(char *src)
+char *ft_strdup(char *src)
 {
-	char	*dest;
-	int		i;
+	char *dest;
+	int i;
 
 	i = 0;
 	while (src[i])
@@ -37,7 +37,6 @@ char	*ft_strdup(char *src)
 
 int main()
 {
-	char s[] ="alperen";
+	char s[] = "alperen";
 	ft_strdup(s);
-	
 }

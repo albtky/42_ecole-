@@ -12,8 +12,25 @@
 
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void ft_putstr(char **str)
 {
-	while (*str)
-		write(1, str++, 1);
+
+	int k = 1;
+	int i = 0;
+	while (*str[i])
+	{
+		i = 0;
+		while (str[k] && *str[k][i])
+		{
+			write(1, &str[k][i], 1);
+			i++;
+		}
+		k++;
+	}
+}
+
+int main()
+{
+	char *s[] = {"alperen ", "tokay"};
+	ft_putstr(&s[0]);
 }
