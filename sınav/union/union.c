@@ -1,53 +1,60 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int check2(char *s, char c)
+int		check_doubles2(char *str, char c)
 {
-    int i = 0;
-    while (s[i])
-    {
-        if (s[i] == c)
-            return (0);
-        i++;
-    }
-    return (1);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
-int check1(char *s, char c, int pos)
+int		check_doubles1(char *str, char c, int pos)
 {
-    int i = 0;
-    while (i < pos)
-    {
-        if (s[i] == c)
-            return (0);
-        i++;
-    }
-    return (1);
+	int i;
+
+	i = 0;
+	while (i < pos)
+	{
+		if (str[i] == c)
+			return (0);
+		i++; 
+	}
+	return (1);
 }
 
-void ftunion(char *s1, char *s2)
+void	ft_union(char *str, char *str1)
 {
-    int i = 0;
-    while (s1[i])
-    {
-        if (check1(s1, s1[i], i) == 1)
-            printf("%c", s1[i]);
-        i++;
-    }
-    i = 0;
-    while (s2[i])
-    {
-        if (check2(s1, s2[i]) == 1)
-        {
-            if (check1(s2, s2[i], i) == 1)
-                printf("%c", s2[i]);
-        }
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (check_doubles1(str, str[i], i) == 1)
+			write(1, &str[i], 1);
+		i++;
+	}
+	i = 0;
+	while (str1[i] != '\0')
+	{
+		if (check_doubles2(str, str1[i]) == 1)
+		{
+			if (check_doubles1(str1, str1[i], i) == 1)
+				write(1, &str1[i], 1);
+		}
+		i++;
+	}
 }
-int main(int argc, char *argv[])
+
+int		main(int ac, char **av)
 {
-    if (argc == 3)
-        ftunion(argv[1], argv[2]);
-    printf("\n");
-    return (0);
+	if (ac == 3)
+		ft_union(av[1], av[2]);
+	write(1, "\n", 1);
+	return (0);
 }
