@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int ft_strlen(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -20,16 +20,16 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	x;
+	unsigned int i;
+	unsigned int x;
 
 	x = ft_strlen(src);
 	i = 0;
 	if (size != 0)
 	{
-		while (src [i] != '\0' && i <= size - 1)
+		while (src[i] != '\0' && i <= size - 1)
 		{
 			dest[i] = src[i];
 			i++;
@@ -40,12 +40,11 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 }
 #include <stdio.h>
 int main()
-
 {
-	char d[] ="alperenıı";
-	char s[]= "ömerbey";
-	ft_strlcpy(d,s,7);
-	printf("%s",d);
+	char d[] = "alperen";
+	char s[] = "ömerbey";
+	ft_strlcpy(d, s, 8);
+	printf("%s", d);
 	printf("\n");
 	return (0);
 }
